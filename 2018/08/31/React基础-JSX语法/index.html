@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>React基础(一)-JSX语法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写出来给大家分享下，本文只涉及基础用法，对于底层的原理和编译我另外再写文章表述。 JSX简介JSX是F">
+<meta name="keywords" content="react,JSX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React基础(一)-JSX语法">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/React基础-JSX语法/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写出来给大家分享下，本文只涉及基础用法，对于底层的原理和编译我另外再写文章表述。 JSX简介JSX是F">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-16T03:58:57.251Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React基础(一)-JSX语法">
+<meta name="twitter:description" content="前言学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写出来给大家分享下，本文只涉及基础用法，对于底层的原理和编译我另外再写文章表述。 JSX简介JSX是F">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-React基础-JSX语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/31/React基础-JSX语法/" class="article-date">
+  <time datetime="2018-08-31T07:43:11.000Z" itemprop="datePublished">2018-08-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/react/">react</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React基础(一)-JSX语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写出来给大家分享下，本文只涉及基础用法，对于底层的原理和编译我另外再写文章表述。</p>
+<h2 id="JSX简介"><a href="#JSX简介" class="headerlink" title="JSX简介"></a>JSX简介</h2><p>JSX是Facebook专门为React发明的一种新的类似于XML格式的语言，它是JavaScript的语法拓展。它使用XML标记的方式去直接声明界面 ，然后再利用编译器转换成JS语言。</p>
+<a id="more"></a>
+
+<p>JSX有一下有点</p>
+<blockquote>
+<ul>
+<li>JSX在渲染的时候输出的虚拟 dom，所以 JSX 执行更快</li>
+<li>类型安全，在编译过程中就能发现错误</li>
+<li>使用 JSX 编写模板更加简单快速</li>
+</ul>
+</blockquote>
+<h2 id="JSX的基本使用"><a href="#JSX的基本使用" class="headerlink" title="JSX的基本使用"></a>JSX的基本使用</h2><p>要使用 JSX 则必须要引入React,React的每一个组件都有render函数，render函数返回的就是JSX渲染的内容，JSX的基本使用个HTML标签没有什么区别。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;Hello word!&lt;/div&gt;  </span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX中使用js表达式"><a href="#JSX中使用js表达式" class="headerlink" title="JSX中使用js表达式"></a>JSX中使用js表达式</h2><p>我们可以在 JSX 中使用 JavaScript 表达式。表达式写在花括号 <strong>{}</strong> 中。实例如下：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">          &lt;div&gt;&#123;<span class="number">1</span>+<span class="number">1</span>&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;div&gt;&#123;i == 1 ? 'True!' : 'False'&#125;&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;  </span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX绑定属性值"><a href="#JSX绑定属性值" class="headerlink" title="JSX绑定属性值"></a>JSX绑定属性值</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">     	 &lt;img src=&#123;imgUrl&#125;&gt;&lt;/img&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX绑定style属性"><a href="#JSX绑定style属性" class="headerlink" title="JSX绑定style属性"></a>JSX绑定style属性</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">     	 &lt;div style=&#123;&#123;<span class="attr">color</span>:<span class="string">'red'</span>, <span class="attr">margin</span>:<span class="string">'0 auto'</span>&#125;&#125;&gt;&lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX注释"><a href="#JSX注释" class="headerlink" title="JSX注释"></a>JSX注释</h2><p>JSX的注释要写在花括号中</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">             &#123;<span class="comment">/*这是一条注释...*/</span>&#125;</span><br><span class="line">        	&lt;div&gt;&#123;<span class="number">1</span>+<span class="number">1</span>&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div&gt;&#123;i == 1 ? 'True!' : 'False'&#125;&lt;/</span>div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;  </span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX插入HTML内容"><a href="#JSX插入HTML内容" class="headerlink" title="JSX插入HTML内容"></a>JSX插入HTML内容</h2><p>JSX默认对所有的插入内容都进行文本转义，这样可以有效避免xss攻击 。某些情况下我们需要将不经转义的HTML片段插入到文档流中，这就需要用到JSX的一个属性：dangerouslySetInnerHTML </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">let</span> v = <span class="string">"&lt;h3&gt;这是一段html内容&lt;/h3&gt;"</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div dangerouslySetInnerHTML=&#123;&#123;<span class="attr">__html</span>: v&#125;&#125;&gt;&lt;/div&gt;  </span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSX占位符：Fragement"><a href="#JSX占位符：Fragement" class="headerlink" title="JSX占位符：Fragement"></a>JSX占位符：Fragement</h2><p>在JSX中返回的内容都必须包含在一个大的标签内，所以我们不得不在最外边套一层div，如果我们不希望页面渲染这层div的话就需要使用占位符-Fragement</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component, Fragement&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;Fragement&gt;</span><br><span class="line">        	&lt;div&gt;Hello word!&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;Hello React!&lt;/div&gt;</span><br><span class="line">        &lt;<span class="regexp">/Fragement&gt;  </span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="注意项"><a href="#注意项" class="headerlink" title="注意项"></a>注意项</h2><h3 id="使用-JSX一定要引入-react"><a href="#使用-JSX一定要引入-react" class="headerlink" title="使用 JSX一定要引入 react"></a>使用 JSX一定要引入 react</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="组件的首字母一定要大写"><a href="#组件的首字母一定要大写" class="headerlink" title="组件的首字母一定要大写"></a>组件的首字母一定要大写</h3><p>为了区别html固定的标签名称，在react中自定义的组件的组件首字母一定要大写，否则会报错。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Header/&gt;   </span><br><span class="line">&lt;Conent&gt;&lt;/Content&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSX中的class名称"><a href="#JSX中的class名称" class="headerlink" title="JSX中的class名称"></a>JSX中的class名称</h3><p>在JSX中给标签起class名称要用 <strong>className</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component, Fragement&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;Fragement&gt;</span><br><span class="line">        	&lt;div className=<span class="string">"title"</span>&gt;Hello word!&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;Hello React!&lt;/div&gt;</span><br><span class="line">        &lt;<span class="regexp">/Fragement&gt;  </span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/31/React基础-JSX语法/" data-id="ck29rbit5000004s6c7ofzwud" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSX/">JSX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/28/react-router4登录权限控制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          react-router4登录权限控制
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/15/echarts主题配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">echarts主题配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/echarts/">echarts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/redux/">redux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSX/">JSX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react-redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-router/">react-router</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/精华/">精华</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hello/" style="font-size: 10px;">Hello</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/echarts/" style="font-size: 13.33px;">echarts</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/react-redux/" style="font-size: 10px;">react-redux</a> <a href="/tags/react-router/" style="font-size: 13.33px;">react-router</a> <a href="/tags/redux/" style="font-size: 13.33px;">redux</a> <a href="/tags/精华/" style="font-size: 16.67px;">精华</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/">React基础(二)-虚拟DOM和Diff算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/30/放假的心-写在十一前夕/">放假的心-写在十一前夕</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/redux基础教程（二）-react-redux的应用/">redux基础教程（二）-react-redux的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/redux基础教程-redux简单应用/">redux基础教程（一）-redux简单应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/react-router4-路由的嵌套和动态传值/">react-router4 路由的嵌套和动态传值</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
