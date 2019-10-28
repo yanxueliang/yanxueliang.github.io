@@ -1300,14 +1300,14 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Wrapper(func) &#123;</span><br><span class="line">    return function(...args) &#123;</span><br><span class="line">        const generator = func(...args);</span><br><span class="line">        generator.next();</span><br><span class="line">        return generator;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">const print = Wrapper(function*() &#123;</span><br><span class="line">    console.log(`First Input: $&#123;yield&#125;`);</span><br><span class="line">    return &quot;done&quot;;</span><br><span class="line">&#125;);</span><br><span class="line">print().next(&quot;hello&quot;);</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 
-<h2 id="ES2016"><a href="#ES2016" class="headerlink" title="ES2016"></a>ES2016</h2><p>![ES2016](data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1118" height="532"/>)</p>
+<h2 id="ES2016"><a href="#ES2016" class="headerlink" title="ES2016"></a>ES2016</h2><p><img alt="ES2016" data-src="https://user-gold-cdn.xitu.io/2019/10/8/16daac0225a7ba3a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" class="lozad"></p>
 <h3 id="数值扩展-1"><a href="#数值扩展-1" class="headerlink" title="数值扩展"></a>数值扩展</h3><ul>
 <li><strong>指数运算符(\</strong>)**：数值求幂(相当于<code>Math.pow()</code>)</li>
 </ul>
 <h3 id="数组扩展-1"><a href="#数组扩展-1" class="headerlink" title="数组扩展"></a>数组扩展</h3><ul>
 <li><strong>includes()</strong>：是否存在指定成员</li>
 </ul>
-<h2 id="ES2017"><a href="#ES2017" class="headerlink" title="ES2017"></a>ES2017</h2><p>![ES2017](data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="990"/>)</p>
+<h2 id="ES2017"><a href="#ES2017" class="headerlink" title="ES2017"></a>ES2017</h2><p><img alt="ES2017" data-src="https://user-gold-cdn.xitu.io/2019/10/8/16daac022ba04edf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" class="lozad"></p>
 <h3 id="声明-1"><a href="#声明-1" class="headerlink" title="声明"></a>声明</h3><ul>
 <li><strong>共享内存和原子操作</strong>：由全局对象<code>SharedArrayBuffer</code>和<code>Atomics</code>实现，将数据存储在一块共享内存空间中，这些数据可在<code>JS主线程</code>和<code>web-worker线程</code>之间共享</li>
 </ul>
@@ -1436,7 +1436,7 @@
 <h3 id="Async-1"><a href="#Async-1" class="headerlink" title="Async"></a>Async</h3><ul>
 <li><strong>异步迭代器(for-await-of)</strong>：，循环等待每个<code>Promise对象</code>变为<code>resolved状态</code>才进入下一步</li>
 </ul>
-<h2 id="ES2019"><a href="#ES2019" class="headerlink" title="ES2019"></a>ES2019</h2><p>![ES2019](data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="1116"/>)</p>
+<h2 id="ES2019"><a href="#ES2019" class="headerlink" title="ES2019"></a>ES2019</h2><p><img alt="ES2019" data-src="https://user-gold-cdn.xitu.io/2019/10/8/16daac0326b8ea4e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" class="lozad"></p>
 <h3 id="字符串扩展-3"><a href="#字符串扩展-3" class="headerlink" title="字符串扩展"></a>字符串扩展</h3><ul>
 <li><strong>直接输入U+2028和U+2029</strong>：字符串可直接输入<code>行分隔符</code>和<code>段分隔符</code></li>
 <li><strong>JSON.stringify()改造</strong>：可返回不符合UTF-8标准的字符串</li>
@@ -1457,7 +1457,7 @@
 <h3 id="Symbol-1"><a href="#Symbol-1" class="headerlink" title="Symbol"></a>Symbol</h3><ul>
 <li><strong>description</strong>：返回<code>Symbol值</code>的描述</li>
 </ul>
-<h2 id="ES提案"><a href="#ES提案" class="headerlink" title="ES提案"></a>ES提案</h2><p>![ES提案](data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="693" height="1280"/>)</p>
+<h2 id="ES提案"><a href="#ES提案" class="headerlink" title="ES提案"></a>ES提案</h2><p><img alt="ES提案" data-src="https://user-gold-cdn.xitu.io/2019/10/8/16daac022cbfa36e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" class="lozad"></p>
 <h3 id="声明-2"><a href="#声明-2" class="headerlink" title="声明"></a>声明</h3><ul>
 <li><strong>globalThis对象</strong>：作为顶层对象，指向全局环境下的<code>this</code></li>
 <li><strong>do表达式</strong>：封装块级作用域的操作，返回内部最后执行表达式的值(<code>do{}</code>)</li>
