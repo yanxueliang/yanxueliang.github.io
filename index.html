@@ -1,80 +1,679 @@
-<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Hexo</title><meta name="description" content><meta name="keywords"><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://yoursite.com/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hexo"><meta name="twitter:description" content><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta property="og:type" content="website"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preload" href="https://i.loli.net/2019/05/22/5ce53eb6dc82757840.jpg" as="image"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  highlight_copy: 'false',
-  highlight_lang: 'true',
-  highlight_shrink: 'false',
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  bookmark: {
-    title: 'Bookmark',
-    message_prev: 'Press',
-    message_next: 'to bookmark this page'
-  },
-  runtime_unit: 'days',
-  copyright: undefined,
-  copy_copyright_js: false
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
   
-}</script></head><body><div id="header"> <div id="page-header"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Hexo</a></span><i class="fa fa-bars fa-fw toggle-menu pull-right close" aria-hidden="true"></i><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></div></div><div id="body-wrap"><nav class="full_page" id="nav"><div class="nav_bg" style="background-image: url(https://i.loli.net/2019/05/22/5ce53eb6dc82757840.jpg)"></div><div id="site-info"><div id="site-title"><span class="blogtitle">Hexo</span></div><div id="site-sub-title"><span class="subtitle"></span></div><div id="site-social-icons"><a class="social-icon" href="https://github.com/jerryc127" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a></div></div><div class="scroll-down"><i class="fa fa-angle-down scroll-down-effects"></i></div></nav><div id="content-outer"><div class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item article-container"><div class="post_cover is_left"><a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/" title="React基础(二)-虚拟DOM和Diff算法"><img class="post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/10/08/React基础-二-虚拟dom和Diff算法/" title="React基础(二)-虚拟DOM和Diff算法">React基础(二)-虚拟DOM和Diff算法</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-10-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/react/">react</a></span><div class="content">在React中最让人称道的就是它的虚拟DOM和独特的Diff算法了，它极大的提高了我们渲染页面的性能。在实际项目中我们不需要去关心虚拟DOM的运行原理，只需关注我们的数据即可，因为Diff算法会帮助我们去计算和分析虚拟DOM中变化的部分，从而去重新渲染该部分，从而实现了性能的提升，也简化了我们的操作 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_right"><a href="/2018/09/30/放假的心-写在十一前夕/" title="放假的心-写在十一前夕"><img class="post_bg lozad" data-src="/2018/09/30/放假的心-写在十一前夕/1.jpg" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/09/30/放假的心-写在十一前夕/" title="放假的心-写在十一前夕">放假的心-写在十一前夕</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/随笔/">随笔</a></span><div class="content">
-明天就是祖国的69岁的生日了，沾祖国母亲的光，我们放假啦！O(∩_∩)O哈哈~
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-React基础-二-虚拟dom和Diff算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/" class="article-date">
+  <time datetime="2018-10-08T08:15:10.000Z" itemprop="datePublished">2018-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/react/">react</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/08/React基础-二-虚拟dom和Diff算法/">React基础(二)-虚拟DOM和Diff算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在React中最让人称道的就是它的虚拟DOM和独特的Diff算法了，它极大的提高了我们渲染页面的性能。在实际项目中我们不需要去关心虚拟DOM的运行原理，只需关注我们的数据即可，因为Diff算法会帮助我们去计算和分析虚拟DOM中变化的部分，从而去重新渲染该部分，从而实现了性能的提升，也简化了我们的操作。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/08/React基础-二-虚拟dom和Diff算法/" data-id="ck29sy42u0000hzs616q8jtts" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/精华/">精华</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
 
 
-俗话说的好“金九银十”，伴随着秋收的喜悦，天气也是变得秋高气爽，日丽风清，先放上几张美图，哈哈……
+  
+    <article id="post-放假的心-写在十一前夕" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/30/放假的心-写在十一前夕/" class="article-date">
+  <time datetime="2018-09-30T07:35:44.000Z" itemprop="datePublished">2018-09-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/30/放假的心-写在十一前夕/">放假的心-写在十一前夕</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="%E6%94%BE%E5%81%87%E7%9A%84%E5%BF%83-%E5%86%99%E5%9C%A8%E5%8D%81%E4%B8%80%E5%89%8D%E5%A4%95/4.jpg" alt="img"></p>
+<p>明天就是祖国的69岁的生日了，沾祖国母亲的光，我们放假啦！O(∩_∩)O哈哈~</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/09/30/放假的心-写在十一前夕/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/30/放假的心-写在十一前夕/" data-id="ck29sy43p000nhzs6plr92d7l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-redux基础教程（二）-react-redux的应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/28/redux基础教程（二）-react-redux的应用/" class="article-date">
+  <time datetime="2018-09-28T08:47:24.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/redux/">redux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/28/redux基础教程（二）-react-redux的应用/">redux基础教程（二）-react-redux的应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="react-redux简介"><a href="#react-redux简介" class="headerlink" title="react-redux简介"></a>react-redux简介</h2><p>React 和 Redux 其实是两个独立的框架，都可以单独的使用。但在react中使用redux的话，就没有理由不使用 react-redux了，因为它可以大大的简化redux的代码书写。</p>
+<h2 id="react-redux核心"><a href="#react-redux核心" class="headerlink" title="react-redux核心"></a>react-redux核心</h2><p>react-redux有两个最主要的核心功能</p>
+<blockquote>
+<ul>
+<li>connect : 用来链接容器组件和UI组件</li>
+<li>Provider: 提供包含 store的context</li>
+</ul>
+</blockquote>
+<h2 id="connect"><a href="#connect" class="headerlink" title="connect()"></a>connect()</h2><p>connect方法，用于从UI组件生产容器组件，将两个组件连接起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line">import &#123; connect &#125; from &apos;react-redux&apos;</span><br><span class="line"></span><br><span class="line">class Home extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">        	...</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">            </span><br><span class="line">export default connect(null,null)(Home);</span><br></pre></td></tr></table></figure>
+
+<p>connect方法有两个参数：<code>mapStateToProps</code> 和<code>mapDispatchToProps</code>。通过这两个单词我们也可以了解到前者是将<code>state</code>映射到UI的<code>props</code>,后者是将UI组件中的一些操作传递给action</p>
+<h3 id="mapStateToProps"><a href="#mapStateToProps" class="headerlink" title="mapStateToProps()"></a>mapStateToProps()</h3><p><code>mapStateToProps</code>是一个函数，是connect的第一个参数，它接收一个参数<code>state</code>,返回一个对象，返回的对象实际就是我们需要获取到的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//UI组件代码</span><br><span class="line">// 使用时直接&#123; this.props.input_value &#125;就可以了。</span><br><span class="line">...</span><br><span class="line">const mapStateToProps = (state) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        input_value: state.default_value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">            </span><br><span class="line">export default connect(mapStateToProps,null)(Home);</span><br></pre></td></tr></table></figure>
+
+<h3 id="mapDispatchToProps"><a href="#mapDispatchToProps" class="headerlink" title="mapDispatchToProps()"></a>mapDispatchToProps()</h3><p><code>mapDispatchToProps</code>可以是函数也可以是对象，如果是函数就会有<code>dispatch</code>和<code>ownProps</code>两个参数，并且return一个对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//UI组件代码</span><br><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line">import &#123; connect &#125; from &apos;react-redux&apos;</span><br><span class="line"></span><br><span class="line">class Home extends Component &#123;</span><br><span class="line">    </span><br><span class="line">    handleClick = () =&gt; &#123;</span><br><span class="line">       this.props.change();</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">        	&lt;div&gt;</span><br><span class="line">            	&lt;button onClick=&#123;this.handleClick&#125;&gt;点我&lt;/button&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const mapDispatchToProps = (dispatch,ownProps) =&gt; &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    change: () =&gt; &#123;</span><br><span class="line">      dispatch(&#123;</span><br><span class="line">        type: &quot;VALUE_CHANGE&quot;,</span><br><span class="line">        value: ownProps.input_value</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;         </span><br><span class="line">export default connect(mapStateToProps,null)(Home);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Provider-组件"><a href="#Provider-组件" class="headerlink" title="Provider 组件"></a>Provider 组件</h2><p><code>connect</code>方法生成容器组件以后，需要让容器组件拿到<code>state</code>对象，才能生成 UI 组件的参数。</p>
+<p>一种解决方法是将<code>state</code>对象作为参数，传入容器组件。但是，这样做比较麻烦，尤其是容器组件可能在很深的层级，一级级将<code>state</code>传下去就很麻烦。</p>
+<p>另外一种就是利用 React-Redux提供的<code>Provider</code>组件，在最外层包一层<code>Provider</code>组件，这样一来，<code>App</code>的所有子组件就默认都可以拿到<code>state</code>了。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line">import ReactDOM from &apos;react-dom&apos;;</span><br><span class="line">import App from &apos;./app&apos;;</span><br><span class="line">import registerServiceWorker from &apos;./registerServiceWorker&apos;;</span><br><span class="line">import store from &apos;./store&apos;</span><br><span class="line">import &#123; Provider &#125; from &apos;react-redux&apos;;</span><br><span class="line"></span><br><span class="line">const Main = (</span><br><span class="line">    &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">        &lt;App /&gt;</span><br><span class="line">    &lt;/Provider&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">ReactDOM.render(Main, document.getElementById(&apos;root&apos;));</span><br><span class="line">registerServiceWorker();</span><br></pre></td></tr></table></figure>
+
+<p>React-Redux虽然看着有些麻烦，但方便了我们的操作，只要多写几遍这个流程，明白了其中的原理，就能很愉快的使用它了。</p>
+<p>参考：<a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html" target="_blank" rel="noopener">阮一峰的网络日志</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/28/redux基础教程（二）-react-redux的应用/" data-id="ck29sy43n000lhzs6mlrt8s8p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-redux/">react-redux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redux/">redux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-redux基础教程-redux简单应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/28/redux基础教程-redux简单应用/" class="article-date">
+  <time datetime="2018-09-28T03:22:16.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/redux/">redux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/28/redux基础教程-redux简单应用/">redux基础教程（一）-redux简单应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="redux%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-redux%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/1.png" alt="img"></p>
+<h2 id="Redux简介"><a href="#Redux简介" class="headerlink" title="Redux简介"></a>Redux简介</h2><p>Redux是JavaScript状态容器，它是一个应用数据流框架，提供可预测的状态管理。换言之，我们应用系统中的一些共享状态、共享数据都可以应用Redux来出来。应用中我们可以在任何位置通过Redux来快速的获取需要的数据，你需要做的只是告诉Redux哪个组件需要，接下来的你就不用管了，Redux会帮你搞定后面的事。是不是很方便啊，接下来让我们一起来学习 Redux吧！</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/09/28/redux基础教程-redux简单应用/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/28/redux基础教程-redux简单应用/" data-id="ck29sy43k000ghzs6alkd6f1s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redux/">redux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-react-router4-路由的嵌套和动态传值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/28/react-router4-路由的嵌套和动态传值/" class="article-date">
+  <time datetime="2018-09-28T02:24:23.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/react/">react</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/28/react-router4-路由的嵌套和动态传值/">react-router4 路由的嵌套和动态传值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="react-router4-%E8%B7%AF%E7%94%B1%E7%9A%84%E5%B5%8C%E5%A5%97%E5%92%8C%E5%8A%A8%E6%80%81%E4%BC%A0%E5%80%BC/timg.jpg" alt="img"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>react-router升级4以后有许多的更改，在web端使用的router改为了 react-router-dom,其整个设计思想也更加符合组件化的思想，一切都是组件！所以路由的嵌套也和之前有了较大的变化，react-router-dom的路由嵌套有两种方式。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/09/28/react-router4-路由的嵌套和动态传值/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/28/react-router4-路由的嵌套和动态传值/" data-id="ck29sy43f000ahzs6e0embg3d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-router/">react-router</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-react-router4登录权限控制" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/28/react-router4登录权限控制/" class="article-date">
+  <time datetime="2018-09-28T01:25:12.000Z" itemprop="datePublished">2018-09-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/react/">react</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/28/react-router4登录权限控制/">react-router4登录权限控制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们在做系统的时候都会遇到登录的问题，那么react框架怎么实现登录权限的控制呢？本文利用react-router-dom和sessionStorage来进行登录权限的控制。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/09/28/react-router4登录权限控制/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/28/react-router4登录权限控制/" data-id="ck29sy43j000ehzs6lljc4x4a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-router/">react-router</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-React基础-JSX语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/31/React基础-JSX语法/" class="article-date">
+  <time datetime="2018-08-31T07:43:11.000Z" itemprop="datePublished">2018-08-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/react/">react</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/31/React基础-JSX语法/">React基础(一)-JSX语法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写出来给大家分享下，本文只涉及基础用法，对于底层的原理和编译我另外再写文章表述。</p>
+<h2 id="JSX简介"><a href="#JSX简介" class="headerlink" title="JSX简介"></a>JSX简介</h2><p>JSX是Facebook专门为React发明的一种新的类似于XML格式的语言，它是JavaScript的语法拓展。它使用XML标记的方式去直接声明界面 ，然后再利用编译器转换成JS语言。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/31/React基础-JSX语法/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/31/React基础-JSX语法/" data-id="ck29sy4370004hzs6zkqld40t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSX/">JSX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-echarts主题配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/15/echarts主题配置/" class="article-date">
+  <time datetime="2018-08-15T06:54:48.000Z" itemprop="datePublished">2018-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/echarts/">echarts</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/15/echarts主题配置/">echarts主题配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="echarts%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/9.jpg" alt="img"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://echarts.baidu.com/index.html" target="_blank" rel="noopener">ECharts</a> 是我们在项目中经常使用的数据可视化插件，默认的主题样式基本能满足我们的需求，奈何公司的 UI 小妹妹是一个极其负责的讲究人，对颜色样式的追求是极致的 ，幸亏echarts官方为我们提供了主题配置工具，让我们轻松搞定各种样式配置。废话不多说，接下来随我一起来搞定echarts的主题配置吧……</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/15/echarts主题配置/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/15/echarts主题配置/" data-id="ck29sy43b0006hzs6nkwmjzom" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echarts/">echarts</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/精华/">精华</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-angular6-引入echarts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/07/angular6-引入echarts/" class="article-date">
+  <time datetime="2018-08-07T05:38:30.000Z" itemprop="datePublished">2018-08-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/angular/">angular</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/07/angular6-引入echarts/">angular6 引入echarts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="angular6-%E5%BC%95%E5%85%A5echarts/chart.jpg" alt="img"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为angular2+ 使用 ==typescript==开发，所以想要使用echarts，必须安装echarts针对angular的插件<a href="https://xieziyu.github.io/ngx-echarts/#/home" target="_blank" rel="noopener"> ngx-echarts</a>。本文案列实际效果如上图。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/07/angular6-引入echarts/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/07/angular6-引入echarts/" data-id="ck29sy4310001hzs67mepp366" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/echarts/">echarts</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/精华/">精华</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-angular的国际化解决方案-ngx-translate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/30/angular的国际化解决方案-ngx-translate/" class="article-date">
+  <time datetime="2018-07-30T09:30:56.000Z" itemprop="datePublished">2018-07-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/angular/">angular</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/30/angular的国际化解决方案-ngx-translate/">angular2+ 国际化解决方案 ngx-translate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装-ngx-translate模块包"><a href="#安装-ngx-translate模块包" class="headerlink" title="安装 ngx-translate模块包"></a>安装 ngx-translate模块包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install @ngx-translate/core@9.1.1 --save</span><br><span class="line">npm install @ngx-translate/http-loader --save</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> ng6 需引入ngx-translate 10.0以上版本</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/07/30/angular的国际化解决方案-ngx-translate/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/30/angular的国际化解决方案-ngx-translate/" data-id="ck29sy4390005hzs6apiul4r8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/精华/">精华</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/echarts/">echarts</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/redux/">redux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSX/">JSX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/">react-redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-router/">react-router</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/精华/">精华</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hello/" style="font-size: 10px;">Hello</a> <a href="/tags/JSX/" style="font-size: 10px;">JSX</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/echarts/" style="font-size: 13.33px;">echarts</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/react-redux/" style="font-size: 10px;">react-redux</a> <a href="/tags/react-router/" style="font-size: 13.33px;">react-router</a> <a href="/tags/redux/" style="font-size: 13.33px;">redux</a> <a href="/tags/精华/" style="font-size: 16.67px;">精华</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/">React基础(二)-虚拟DOM和Diff算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/30/放假的心-写在十一前夕/">放假的心-写在十一前夕</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/redux基础教程（二）-react-redux的应用/">redux基础教程（二）-react-redux的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/redux基础教程-redux简单应用/">redux基础教程（一）-redux简单应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/28/react-router4-路由的嵌套和动态传值/">react-router4 路由的嵌套和动态传值</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
 
 
 
-怎么样？是不是被惊艳到了！往日看惯了雾霾遮蔽日，这样的碧空如洗，风轻云净 真的是让人心情大好啊。
-本来计划放 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_left"><a href="/2018/09/28/redux基础教程（二）-react-redux的应用/" title="redux基础教程（二）-react-redux的应用"><img class="post_bg lozad" data-src="2018/09/28/redux基础教程-redux简单应用/2.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/09/28/redux基础教程（二）-react-redux的应用/" title="redux基础教程（二）-react-redux的应用">redux基础教程（二）-react-redux的应用</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/redux/">redux</a></span><div class="content">react-redux简介React 和 Redux 其实是两个独立的框架，都可以单独的使用。但在react中使用redux的话，就没有理由不使用 react-redux了，因为它可以大大的简化redux的代码书写。
-react-redux核心react-redux有两个最主要的核心功能
-
-
-con ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_right"><a href="/2018/09/28/redux基础教程-redux简单应用/" title="redux基础教程（一）-redux简单应用"><img class="post_bg lozad" data-src="/2018/09/28/redux基础教程-redux简单应用/2.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/09/28/redux基础教程-redux简单应用/" title="redux基础教程（一）-redux简单应用">redux基础教程（一）-redux简单应用</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/redux/">redux</a></span><div class="content">
-Redux简介Redux是JavaScript状态容器，它是一个应用数据流框架，提供可预测的状态管理。换言之，我们应用系统中的一些共享状态、共享数据都可以应用Redux来出来。应用中我们可以在任何位置通过Redux来快速的获取需要的数据，你需要做的只是告诉Redux哪个组件需要，接下来的你就不用管 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_left"><a href="/2018/09/28/react-router4-路由的嵌套和动态传值/" title="react-router4 路由的嵌套和动态传值"><img class="post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/09/28/react-router4-路由的嵌套和动态传值/" title="react-router4 路由的嵌套和动态传值">react-router4 路由的嵌套和动态传值</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/react/">react</a></span><div class="content">
-前言react-router升级4以后有许多的更改，在web端使用的router改为了 react-router-dom,其整个设计思想也更加符合组件化的思想，一切都是组件！所以路由的嵌套也和之前有了较大的变化，react-router-dom的路由嵌套有两种方式。
-
-
-路由嵌套1.在组件中需要嵌 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_right"><a href="/2018/09/28/react-router4登录权限控制/" title="react-router4登录权限控制"><img class="post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/09/28/react-router4登录权限控制/" title="react-router4登录权限控制">react-router4登录权限控制</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/react/">react</a></span><div class="content">前言我们在做系统的时候都会遇到登录的问题，那么react框架怎么实现登录权限的控制呢？本文利用react-router-dom和sessionStorage来进行登录权限的控制。
-
-
-安装react-router-dom1yarn add react-router-dom
-
-入口文件 - index ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_left"><a href="/2018/08/31/React基础-JSX语法/" title="React基础(一)-JSX语法"><img class="post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/08/31/React基础-JSX语法/" title="React基础(一)-JSX语法">React基础(一)-JSX语法</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-31</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/react/">react</a></span><div class="content">前言学习和使用React有一段时间了，最近时间比较充裕，所以想把最近这段时间学习和使用react的心得和经验总结一下，从react的基础用法，到react-router、redux、immutable.js、styled-components等与react配套使用的一系列插件的使用都进行一个总结，写 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_right"><a href="/2018/08/15/echarts主题配置/" title="echarts主题配置"><img class="post_bg lozad" data-src="/2018/08/15/echarts主题配置/9.jpg" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/08/15/echarts主题配置/" title="echarts主题配置">echarts主题配置</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/echarts/">echarts</a></span><div class="content">
-前言ECharts 是我们在项目中经常使用的数据可视化插件，默认的主题样式基本能满足我们的需求，奈何公司的 UI 小妹妹是一个极其负责的讲究人，对颜色样式的追求是极致的 ，幸亏echarts官方为我们提供了主题配置工具，让我们轻松搞定各种样式配置。废话不多说，接下来随我一起来搞定echarts的主 ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_left"><a href="/2018/08/07/angular6-引入echarts/" title="angular6 引入echarts"><img class="post_bg lozad" data-src="/2018/08/07/angular6-引入echarts/chart.jpg" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/08/07/angular6-引入echarts/" title="angular6 引入echarts">angular6 引入echarts</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/angular/">angular</a></span><div class="content">
-前言因为angular2+ 使用 ==typescript==开发，所以想要使用echarts，必须安装echarts针对angular的插件 ngx-echarts。本文案列实际效果如上图。
-
-
-安装ngx-echarts12npm install echarts --savenpm insta ...</div></div></div><div class="recent-post-item article-container"><div class="post_cover is_right"><a href="/2018/07/30/angular的国际化解决方案-ngx-translate/" title="angular2+ 国际化解决方案 ngx-translate"><img class="post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"></a></div><div class="recent-post-info">  <a class="article-title" href="/2018/07/30/angular的国际化解决方案-ngx-translate/" title="angular2+ 国际化解决方案 ngx-translate">angular2+ 国际化解决方案 ngx-translate</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/angular/">angular</a></span><div class="content">安装 ngx-translate模块包12npm install @ngx-translate/core@9.1.1 --savenpm install @ngx-translate/http-loader --save
-
-注意： ng6 需引入ngx-translate 10.0以上版本
-
-
-创建 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-chevron-right"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card_widget card-author"><div class="card-content"><div class="post_data"><div class="data-item is_center"><img class="lozad avatar_img" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"><p class="author-info__name is_center">John Doe</p><p class="author-info__description is_center"></p></div></div><div class="post_data data_config"><div class="data-item is_center"><div class="data_link"><a href="/archives/"><p class="headline">Articles</p><p class="length_num">11</p></a></div></div><div class="data-item is_center">      <div class="data_link"><a href="/tags/"><p class="headline">Tags</p><p class="length_num">10</p></a></div></div><div class="data-item is_center">     <div class="data_link"><a href="/categories/"><p class="headline">Categories</p><p class="length_num">5</p></a></div></div></div><div class="post_data is_center"><a class="data-item bookmark bookmarke--primary bookmark--animated" id="bookmark-it" href="javascript:;" title="Add to bookmark"><i class="fa fa-bookmark" aria-hidden="true"></i><span>Add to bookmark</span></a></div><div class="post_data data_config"><div id="aside-social-icons"> <a class="social-icon data-item" href="https://github.com/jerryc127" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon data-item" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a></div></div></div></div><div class="card_widget card-announcement"><div class="card-content"><div class="item_headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>Announcement</span></div><div class="announcement_content">感謝訪問本站，若喜歡請收藏 ^_^</div></div></div><div class="card_widget card-recent-post"><div class="card-content"><div class="item_headline"><i class="fa fa-history" aria-hidden="true"></i><span>Recent Post</span></div><div class="aside_recent_item"><div class="aside_recent_post"><a href="/2018/10/08/React基础-二-虚拟dom和Diff算法/"><div class="aside_post_cover"><img class="aside_post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" title="React基础(二)-虚拟DOM和Diff算法"></div><div id="aside_title"><div class="aside_post_title" href="/2018/10/08/React基础-二-虚拟dom和Diff算法/" title="React基础(二)-虚拟DOM和Diff算法">React基础(二)-虚拟DOM和Diff算法</div><time class="aside_post_meta post-meta__date">2018-10-08</time></div></a></div><div class="aside_recent_post"><a href="/2018/09/30/放假的心-写在十一前夕/"><div class="aside_post_cover"><img class="aside_post_bg lozad" data-src="/2018/09/30/放假的心-写在十一前夕/1.jpg" onerror="onerror=null;src='/img/404.jpg'" title="放假的心-写在十一前夕"></div><div id="aside_title"><div class="aside_post_title" href="/2018/09/30/放假的心-写在十一前夕/" title="放假的心-写在十一前夕">放假的心-写在十一前夕</div><time class="aside_post_meta post-meta__date">2018-09-30</time></div></a></div><div class="aside_recent_post"><a href="/2018/09/28/redux基础教程（二）-react-redux的应用/"><div class="aside_post_cover"><img class="aside_post_bg lozad" data-src="2018/09/28/redux基础教程-redux简单应用/2.png" onerror="onerror=null;src='/img/404.jpg'" title="redux基础教程（二）-react-redux的应用"></div><div id="aside_title"><div class="aside_post_title" href="/2018/09/28/redux基础教程（二）-react-redux的应用/" title="redux基础教程（二）-react-redux的应用">redux基础教程（二）-react-redux的应用</div><time class="aside_post_meta post-meta__date">2018-09-28</time></div></a></div><div class="aside_recent_post"><a href="/2018/09/28/redux基础教程-redux简单应用/"><div class="aside_post_cover"><img class="aside_post_bg lozad" data-src="/2018/09/28/redux基础教程-redux简单应用/2.png" onerror="onerror=null;src='/img/404.jpg'" title="redux基础教程（一）-redux简单应用"></div><div id="aside_title"><div class="aside_post_title" href="/2018/09/28/redux基础教程-redux简单应用/" title="redux基础教程（一）-redux简单应用">redux基础教程（一）-redux简单应用</div><time class="aside_post_meta post-meta__date">2018-09-28</time></div></a></div><div class="aside_recent_post"><a href="/2018/09/28/react-router4-路由的嵌套和动态传值/"><div class="aside_post_cover"><img class="aside_post_bg lozad" data-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" title="react-router4 路由的嵌套和动态传值"></div><div id="aside_title"><div class="aside_post_title" href="/2018/09/28/react-router4-路由的嵌套和动态传值/" title="react-router4 路由的嵌套和动态传值">react-router4 路由的嵌套和动态传值</div><time class="aside_post_meta post-meta__date">2018-09-28</time></div></a></div></div></div></div><div class="card_widget card-categories"><div class="card-content"><div class="item_headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>Categories</span></div><ul class="aside_category_item">       <li class="aside_category_list"><a class="aside_category_list_link" href="/categories/angular/"><span class="aside_category_list_name">angular</span><span class="aside_category_list_length">2</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/echarts/"><span class="aside_category_list_name">echarts</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/react/"><span class="aside_category_list_name">react</span><span class="aside_category_list_length">4</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/redux/"><span class="aside_category_list_name">redux</span><span class="aside_category_list_length">2</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/随笔/"><span class="aside_category_list_name">随笔</span><span class="aside_category_list_length">1</span></a></li></ul></div></div><div class="card_widget card-tags"><div class="card-content"><div class="item_headline"><i class="fa fa-tags" aria-hidden="true"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Hello/" style="font-size: 16px; color: #999">Hello</a> <a href="/tags/JSX/" style="font-size: 16px; color: #999">JSX</a> <a href="/tags/angular/" style="font-size: 18.67px; color: #666">angular</a> <a href="/tags/echarts/" style="font-size: 18.67px; color: #666">echarts</a> <a href="/tags/react/" style="font-size: 24px; color: #000">react</a> <a href="/tags/react-redux/" style="font-size: 16px; color: #999">react-redux</a> <a href="/tags/react-router/" style="font-size: 18.67px; color: #666">react-router</a> <a href="/tags/redux/" style="font-size: 18.67px; color: #666">redux</a> <a href="/tags/精华/" style="font-size: 21.33px; color: #333">精华</a> <a href="/tags/随笔/" style="font-size: 16px; color: #999">随笔</a></div></div></div><div class="card_widget card-archives"><div class="card-content"><div class="item_headline"><i class="fa fa-archive" aria-hidden="true"></i><span>Archives</span></div><div class="archives_item"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">2018年10月<span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">2018年09月<span class="archive-list-count">5</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">2018年08月<span class="archive-list-count">3</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">2018年07月<span class="archive-list-count">2</span></a></li></ul></div></div></div><div class="card_widget card-webinfo"><div class="card-content"><div class="item_headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>Info</span></div><div class="webinfo"><div class="webinfo_item"><div class="webinfo_article_name">Article :</div><div class="webinfo_article_count">11</div></div><div class="webinfo_item"><div class="webinfo_runtime_name">Run time :</div><div class="webinfo_runtime_count" id="webinfo_runtime_count"></div><script id="runtionshow" src="/js/runtimeshow.js" start_date="6/7/2018 00:00:00">      </script></div><div class="webinfo_item">      <div class="webinfo_site_uv_name">UV :</div><div class="webinfo_site_uv_count" id="busuanzi_value_site_uv"></div></div><div class="webinfo_item"><div class="webinfo_site_name">PV :</div><div class="webinfo_site_pv_count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></div></div><footer><div id="footer"><div class="copyright">&copy;2018 - 2019 By John Doe</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/nightshift.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
-
-</script><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9">   </script><script>var typed = new Typed(".subtitle", {
-strings: '今日事&#44;今日畢,Never put off till tomorrow what you can do today'.split(","),
-startDelay: 300,
-typeSpeed: 100,
-loop: true,
-backSpeed: 50
-});
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-observer.observe();
-</script><script>//首頁fullpage
-function alignContent() {
-  for (var n = $(window).height(), e = document.querySelectorAll(".full_page"), i = 0; i < e.length; i++) 
-    e[i].style.height = n + "px";
-    $("#site-info").each(function () {
-      var x = $(this).height();
-      $(this).css("top", (n-x)/2)       
-    })
-}
-alignContent();
-
-$(window).bind("resize", function () {
-  alignContent()
-})</script></body></html>
+  </div>
+</body>
+</html>
